@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Universe | Explorar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <a href="index.html" class="logo">
+            <span>MARVEL</span> UNIVERSE
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="explorar.html" class="ativo">Explorar</a>
+            <a href="ferramentas.html">Ferramentas</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <button id="alternarTema" class="botao-tema">
+            ◐
+        </button>
+
+    </header>
+
+    <main class="secao">
+
+        <section class="cabecalho-pagina">
+
+            <p class="sobretitulo">MARVEL DATABASE</p>
+
+            <h1>
+                Explore os <span>personagens</span>
+            </h1>
+
+            <p>
+                Descubra os heróis e vilões do universo Marvel.
+                Pesquise, filtre e salve seus personagens favoritos.
+            </p>
+
+        </section>
+
+        <section class="barra-filtros">
+
+            <label class="campo-busca">
+                <span class="sr-only">Pesquisar personagem</span>
+                <input
+                    type="search"
+                    id="campoBusca"
+                    placeholder="Digite o nome de um personagem..."
+                >
+            </label>
+
+            <label class="sr-only" for="filtroAlinhamento">
+                Filtrar alinhamento
+            </label>
+
+            <select id="filtroAlinhamento">
+                <option value="todos">Todos</option>
+                <option value="good">Heróis</option>
+                <option value="bad">Vilões</option>
+                <option value="neutral">Neutros</option>
+            </select>
+
+            <label class="check-favoritos">
+                <input type="checkbox" id="mostrarFavoritos">
+                Apenas favoritos
+            </label>
+
+        </section>
+
+        <p id="statusApi" class="mensagem-status" role="status">
+            Carregando personagens...
+        </p>
+
+        <section
+            id="listaPersonagens"
+            class="grade-personagens"
+            aria-label="Personagens Marvel"
+        >
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Marvel Universe — Projeto acadêmico independente.</p>
+    </footer>
+
+</body>
+</html>

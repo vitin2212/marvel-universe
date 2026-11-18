@@ -1,0 +1,565 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    border-bottom: 1px solid #292929;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.logo span {
+    background-color: #e62429;
+    padding: 5px;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+}
+
+.menu a {
+    color: #aaaaaa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #ffffff;
+}
+
+.botao-tema {
+    background: #20242b;
+    color: white;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/* DESTAQUE PRINCIPAL */
+
+.hero {
+    min-height: 480px;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-conteudo {
+    max-width: 600px;
+}
+
+.sobretitulo {
+    color: #e62429;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #e62429;
+}
+
+.descricao {
+    color: #aaaaaa;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.botao-principal {
+    display: inline-block;
+    background: #e62429;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background: #b91c21;
+    transform: translateY(-3px);
+}
+
+/* IMAGEM PRINCIPAL */
+
+.hero-imagem img {
+    width: 430px;
+    max-width: 100%;
+    border-radius: 15px;
+    filter: drop-shadow(0 0 25px rgba(230, 36, 41, 0.4));
+    transition: transform 0.3s;
+}
+
+.hero-imagem img:hover {
+    transform: scale(1.04);
+}
+
+/* SEÇÃO DE DESTAQUES */
+
+.secao {
+    padding: 60px 8%;
+}
+
+.titulo-secao {
+    margin-bottom: 30px;
+}
+
+.titulo-secao h2 {
+    font-size: 30px;
+}
+
+.grade-destaques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cartao {
+    background: #171a1f;
+    border: 1px solid #30343b;
+    border-radius: 10px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.cartao:hover {
+    border-color: #e62429;
+    transform: translateY(-5px);
+}
+
+.cartao h3 {
+    margin-bottom: 15px;
+    color: #e62429;
+}
+
+.cartao p {
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    padding: 25px 7%;
+    border-top: 1px solid #292929;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #888888;
+    font-size: 13px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .cabecalho {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .grade-destaques {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-imagem img {
+        width: 230px;
+    }
+
+}
+
+
+/* =====================================
+   PÁGINA EXPLORAR
+===================================== */
+
+.cabecalho-pagina {
+    margin-bottom: 35px;
+}
+
+.cabecalho-pagina h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.cabecalho-pagina h1 span {
+    color: #e62429;
+}
+
+.cabecalho-pagina>p:last-child {
+    color: #aaaaaa;
+}
+
+/* BARRA DE PESQUISA */
+
+.barra-filtros {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.campo-busca {
+    flex: 1;
+    min-width: 220px;
+}
+
+.barra-filtros input,
+.barra-filtros select {
+    width: 100%;
+    padding: 13px;
+    background: #171a1f;
+    color: white;
+    border: 1px solid #30343b;
+    border-radius: 7px;
+}
+
+.barra-filtros input:focus,
+.barra-filtros select:focus {
+    border-color: #e62429;
+    outline: none;
+}
+
+.check-favoritos {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #aaaaaa;
+}
+
+.check-favoritos input {
+    width: 17px;
+    accent-color: #e62429;
+}
+
+/* GRADE DE PERSONAGENS */
+
+.grade-personagens {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cartao-personagem {
+    padding: 0;
+    overflow: hidden;
+    background: #171a1f;
+    border: 1px solid #30343b;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.cartao-personagem:hover {
+    transform: translateY(-5px);
+    border-color: #e62429;
+}
+
+.cartao-personagem figure {
+    margin: 0;
+}
+
+.imagem-personagem {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 4.5;
+    object-fit: cover;
+    background: #252830;
+}
+
+.personagem-conteudo {
+    padding: 16px;
+}
+
+.personagem-conteudo h2 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.personagem-conteudo p {
+    color: #aaaaaa;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.botao-favorito {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    background: #252830;
+    color: white;
+    border: 1px solid #414650;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.botao-favorito:hover,
+.botao-favorito.marcado {
+    background: #8e171b;
+    border-color: #e62429;
+}
+
+/* MODO ESCURO SALVO */
+
+body.escuro {
+    background-color: #08090b;
+    color: #ffffff;
+}
+
+/* ACESSIBILIDADE */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+    .grade-personagens {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .grade-personagens {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cabecalho-pagina h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 420px) {
+    .grade-personagens {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* PÁGINA FERRAMENTAS */
+
+.painel-ferramenta {
+    background: #171a1f;
+    border: 1px solid #30343b;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+.painel-ferramenta h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.painel-ferramenta>p:not(.sobretitulo) {
+    color: #aaaaaa;
+    margin-bottom: 20px;
+}
+
+.campos-calculo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.campos-calculo label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #aaaaaa;
+}
+
+.campos-calculo input,
+.campos-calculo select {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background: #252830;
+    border: 1px solid #414650;
+    border-radius: 6px;
+}
+
+.campos-calculo input:focus,
+.campos-calculo select:focus {
+    border-color: #e62429;
+    outline: none;
+}
+
+.resultado {
+    margin-top: 20px;
+    color: #e62429;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 650px) {
+    .campos-calculo {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* PÁGINA CONTATO */
+
+.formulario-container {
+    max-width: 720px;
+    padding: 30px;
+    background: #171a1f;
+    border: 1px solid #30343b;
+    border-radius: 12px;
+}
+
+#formContato {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#formContato label {
+    color: #cccccc;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#formContato input,
+#formContato select,
+#formContato textarea {
+    width: 100%;
+    padding: 13px;
+    background: #252830;
+    color: white;
+    border: 1px solid #414650;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+#formContato textarea {
+    resize: vertical;
+}
+
+#formContato input:focus,
+#formContato select:focus,
+#formContato textarea:focus {
+    border-color: #e62429;
+    outline: none;
+}
+
+#formContato input[type="email"] {
+    letter-spacing: .3px;
+}
+
+#formContato button {
+    margin-top: 12px;
+}
+
+.mensagem-status {
+    margin-top: 20px;
+    color: #cccccc;
+}
+
+@media (max-width: 600px) {
+
+    .formulario-container {
+        padding: 20px;
+    }
+
+}
+
+/* PSEUDO-ELEMENTO */
+
+input::placeholder,
+textarea::placeholder {
+    color: #858b96;
+    opacity: 1;
+}
+
+/* MODO ESCURO */
+
+body.escuro .cartao,
+body.escuro .painel-ferramenta,
+body.escuro .formulario-container {
+    background-color: #111318;
+    border-color: #292e37;
+}
+
+/* FOCO NOS CAMPOS */
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid rgba(230, 36, 41, 0.35);
+    border-color: #e62429;
+}
+
+figure figcaption {
+    padding: 8px;
+    color: #aaaaaa;
+    font-size: 12px;
+    text-align: center;
+}
+
+body:not(.escuro) figure figcaption {
+    color: #555555;
+}

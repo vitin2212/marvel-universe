@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Universe | Contato</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <a href="index.html" class="logo">
+            <span>MARVEL</span> UNIVERSE
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="explorar.html">Explorar</a>
+            <a href="ferramentas.html">Ferramentas</a>
+            <a href="contato.html" class="ativo">Contato</a>
+        </nav>
+
+        <button id="alternarTema" class="botao-tema">◐</button>
+
+    </header>
+
+    <main class="secao">
+
+        <section class="cabecalho-pagina">
+
+            <p class="sobretitulo">FALE CONOSCO</p>
+
+            <h1>
+                Entre em <span>contato</span>
+            </h1>
+
+            <p>
+                Tem alguma sugestão ou dúvida?
+                Envie sua mensagem.
+            </p>
+
+        </section>
+
+        <section class="formulario-container">
+
+            <form id="formContato">
+
+                <label for="nome">
+                    Nome completo
+                </label>
+
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required minlength="2">
+
+                <label for="email">
+                    E-mail
+                </label>
+
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                <label for="assunto">
+                    Assunto
+                </label>
+
+                <select id="assunto" name="assunto" required>
+
+                    <option value="">Selecione um assunto</option>
+
+                    <option value="duvida">Dúvida</option>
+
+                    <option value="sugestao">Sugestão</option>
+
+                    <option value="feedback">Feedback</option>
+
+                </select>
+
+                <label for="mensagem">
+                    Mensagem
+                </label>
+
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem..." required
+                    minlength="10"></textarea>
+
+                <button type="submit" class="botao-principal">
+                    Enviar mensagem →
+                </button>
+
+            </form>
+
+            <p id="statusFormulario" class="mensagem-status" role="status" aria-live="polite"></p>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Marvel Universe — Projeto acadêmico independente.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Universe | Ferramentas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <a href="index.html" class="logo">
+            <span>MARVEL</span> UNIVERSE
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="explorar.html">Explorar</a>
+            <a href="ferramentas.html" class="ativo">Ferramentas</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <button id="alternarTema" class="botao-tema">◐</button>
+
+    </header>
+
+    <main class="secao">
+
+        <section class="cabecalho-pagina">
+            <p class="sobretitulo">POWER LAB</p>
+
+            <h1>
+                Ferramentas <span>Marvel</span>
+            </h1>
+
+            <p>
+                Calcule, compare e descubra os atributos
+                dos personagens.
+            </p>
+        </section>
+
+        <!-- CALCULADORA -->
+
+        <section class="painel-ferramenta">
+
+            <p class="sobretitulo">TDE 01 · JAVASCRIPT</p>
+
+            <h2>Calculadora de atributos</h2>
+
+            <p>
+                Realize operações matemáticas com os valores desejados.
+            </p>
+
+            <div class="campos-calculo">
+
+                <label for="valorA">
+                    Primeiro valor
+                    <input type="number" id="valorA" value="80">
+                </label>
+
+                <label for="operacao">
+                    Operação
+                    <select id="operacao">
+                        <option value="somar">Somar (+)</option>
+                        <option value="subtrair">Subtrair (-)</option>
+                        <option value="multiplicar">Multiplicar (×)</option>
+                        <option value="dividir">Dividir (÷)</option>
+                    </select>
+                </label>
+
+                <label for="valorB">
+                    Segundo valor
+                    <input type="number" id="valorB" value="20">
+                </label>
+
+            </div>
+
+            <button
+                type="button"
+                class="botao-principal"
+                id="calcularOperacao"
+            >
+                Calcular resultado
+            </button>
+
+            <p id="resultadoCalculo" class="resultado" aria-live="polite">
+                Resultado: —
+            </p>
+
+        </section>
+
+        <!-- ESTATÍSTICAS -->
+
+        <section class="painel-ferramenta">
+
+            <p class="sobretitulo">ESTATÍSTICAS</p>
+
+            <h2>Média de poder dos personagens</h2>
+
+            <p>
+                Consulte a média dos seis atributos dos personagens
+                da Marvel disponíveis na API.
+            </p>
+
+            <button
+                type="button"
+                class="botao-principal"
+                id="calcularMedia"
+            >
+                Calcular média
+            </button>
+
+            <p id="resultadoMedia" class="resultado" aria-live="polite">
+                Aguardando dados...
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Marvel Universe — Projeto acadêmico independente.</p>
+    </footer>
+
+</body>
+</html>
